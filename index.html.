@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>My Snazzy Pickle Powered Form</title>
+  <style>
+    body {
+      font-family:Helvetica
+    }
+    form {
+      background-color: #eee;
+      padding:10px;
+      display:grid;
+      grid-template-columns: [labels] auto [controls] 0.9fr;
+      grid-gap: 0.8em
+      grid-auto-flow: row;
+    }
+    
+    label {
+      grid-column:labels;
+      grid-row: auto;
+      padding-right:15px;
+    }
+    
+    input, textarea, button {
+      grid-column: controls;
+      grid-row: auto;
+      margin-bottom:10px;
+    }
+    
+    button {
+      padding:5px;
+      border-radius:4px;
+      border:1px solid #ccc;
+      font-weight:bold;
+    }
+  </style>
+</head>
+<body>
+  <form method="POST" action="YOUR_PICKLE_FORM_SUBMIT_URL_HERE">
+      <label>First Name</label>
+      <input type="text" name="first_name">
+      <label>Last Name</label>
+      <input type="text" name="last_name">
+      <label>Email Address</label>
+      <input type="text" name="email">
+      <label>How can we help?</label>
+      <textarea type="text" name="message"></textarea>
+    <button type="submit">Send Form</button>
+  </form>
+
+</body>
+</html>
+
